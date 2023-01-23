@@ -1,0 +1,7 @@
+_0,_1,_2
+Cite
+
+>
+_:n_0(x),nCite(x.y),_0(y)
+_:n_1(x),nCite(x.y),_1(y)
+_:n_2(x),nCite(x.y),_2(y)
