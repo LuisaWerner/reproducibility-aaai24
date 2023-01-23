@@ -289,7 +289,7 @@ def print_stats(history):
 def print_and_plot_results(history, plot_title, other_deltas='', confidence_level=0.95):
     """
     Parameters:
-    - other_deltas: a string taking values in ['', 'i', 't']. 
+    - other_deltas: a string taking values in ['', 'i', 't'].
         - '': Only the deltas from kenn are plotted:
         - 'i': The deltas from the other inductive experiments are printed along our deltas
         - 't': The deltas from the other transductive experiments are printed along our deltas
@@ -298,7 +298,7 @@ def print_and_plot_results(history, plot_title, other_deltas='', confidence_leve
     print_stats(history)
     plot_means_and_intervals(history, plot_title, 0.4,
                              confidence_level=confidence_level)
-    plot_deltas(history, title=plot_title, other_deltas=other_deltas)
+    # plot_deltas(history, title=plot_title, other_deltas=other_deltas)
 
 
 def plot_clause_weights(history):
@@ -318,7 +318,7 @@ def plot_clause_weights(history):
     fig.set_figheight(5)
     fig.set_figwidth(15)
     plt.subplots_adjust(hspace=0.3)
-    plt.savefig('plots/clause_weights.png')
+    # plt.savefig('plots/clause_weights.png')
 
 
 def make_t_test(history):
