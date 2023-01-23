@@ -1,0 +1,11 @@
+class_0,class_1,class_2,class_3,class_4,class_5,class_6
+Link
+
+>
+_:nclass_0(x),nLink(x.y),class_0(y)
+_:nclass_1(x),nLink(x.y),class_1(y)
+_:nclass_2(x),nLink(x.y),class_2(y)
+_:nclass_3(x),nLink(x.y),class_3(y)
+_:nclass_4(x),nLink(x.y),class_4(y)
+_:nclass_5(x),nLink(x.y),class_5(y)
+_:nclass_6(x),nLink(x.y),class_6(y)
