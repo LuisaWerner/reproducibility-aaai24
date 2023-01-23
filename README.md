@@ -8,12 +8,12 @@ This repository contains our re-implementation of the experiments conducted with
 | Cora           | from Planetoid, Citation Network | 2,708     | 10,556      | 1,433     | 7        | Node Classification  |
 | PubMed         | from Planetoid, Citation Network | 19,717    | 88,648      | 500       | 3        | Node Classification  |
 
-# Overview of this repository
+### Overview of this repository
 This repository contains to sub-directories that refer to the experiments conducted with the initial implementation and the re-implementation.  
 1. The initial_implementation contains code from initial experiments: basically found [here]9(https://github.com/rmazzier/KENN-Citeseer-Experiments), extended to Cora and PubMed
 2. The re_implementation contains code for the experiments based on PyTorch. 
 
-# Before running the experiments in both implementations
+### Before running the experiments in both implementations
 1. In order to make sure that the right environment is used, the necessary Python packages and their versions are specified in `requirements.txt`. We use Python 3.9.12. To install them go in the project directory and create a conda environment  
 ```
 pip install -r requirements.txt
@@ -25,23 +25,32 @@ Run the following command from the project directory to get PubMed and Cora.
 python create_datasets.py 
 ```
 
-3. Run the initial experiments. 
-To run the initial experiments with the specified parameters in the paper on all three datasets, run the following command from the project directory: 
+### To run the initial experiments. 
+1. To run the initial experiments with the specified parameters in the paper on all three datasets, run the following command from the project directory: 
 ```
 cd initial_implementation
 python test.py 
 ```
 
-The results of the initial experiments will be stored in `/initial_experiments/results` and can be analyzed with the jupyter notebook `initial_experiments/final_results.ipynb`. 
+2. To get an overview of the results of the initial implementation. It is important that all experiments are finished before. 
+```
+cd initial_implementation
+python inspect_results.py
+```
 
-4. Run the replicated experiment.
-The hyperparameters of the run are stored in the conf.json file. By default, the conf.json file contains parameters mentioned in the paper. 
-In part 
-We use [Weights and Biases](https://wandb.ai/site) as experiment tracking tool. The experiments can be run without or with a weights and biases account. 
+### To run the replicated experiment.
+We use [Weights and Biases](https://wandb.ai/site) as experiment tracking tool. The experiments can be run without or with a weights and biases account.
+1. To run the experiments without WandB connection run the following command. 
 
-4.1 If you want to use weights and biases
-4.1.1
-Specify the following parameters in  `re-implementation/conf.json`.
+```
+cd re-implementation
+python train_and_evaluate.py conf.json 
+```
+
+(By default, ```"wandb_use" : false``` is set in `re-implementation/conf.json`)  
+
+
+2. If you want to use weights and biases specify the following parameters in  `re-implementation/conf.json`.
 ```
 "wandb_use" : true,
 "wandb_label": "<your label>",
@@ -55,21 +64,21 @@ cd re-implementation
 python run_experiments.py conf.json
 ```
 
-4.2 If you do not want to use weights and biases, make sure that ```"wandb_use" : false``` is set in `re-implementation/conf.json`.
-Then run the commands: 
-
+Interprete the results 
+To get an overview of the results of the re-implementation, run the following command
 ```
-cd re-implementation
-python train_and_evaluate.py conf.json 
+cd re_implementation
+python inspect_results.py
 ```
 
-4.3 Interprete the results 
-To get an overview of the results of the re-implementation, run the notebook 're_implementation/inspect_results.ipynb'.
+### Comparison between both implementations 
+To compare the results of both approaches (comparison type 2 reproducibility), go to the project folder and run
+```
+python compare_results.py 
+```
 
-5. Compare the results
-To compare the results of both approaches, run the notebook 'compare_both.ipynb' in the project directory
-
-6. Overview about the hyperparameters (specified in conf.json file), describe their meaning.
+### Hyperparameters 
+The hyperparameters of the run are stored in the conf.json file. By default, the conf.json file contains parameters mentioned in the paper.
 In the file `re-implementation/conf.json`, the hyperparameters and settings of the are saved. The last column indicates whether the parameter can be modified in this implementation and to which values it should be set. 
 In this repository, this file uses the parameter combinations described in the paper. 
 Here is an overview about the hyperparameters that can be set: 

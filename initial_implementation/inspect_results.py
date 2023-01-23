@@ -7,56 +7,26 @@ import pickle
 if __name__ == '__main__':
 
     conf = 0.95
-    # CiteSeer Original
-    with open('results/e2e/repeat /results_transductive_100runs_3layers_repeat', 'rb') as input:
-        citeseer_original_transductive = pickle.load(input)
-    print('CiteSeer Original')
-    print_and_plot_results(
-        citeseer_original_transductive,
-        plot_title=f"Transductive learning, {conf * 100}% confidence intervals",
-        other_deltas='t',
-        confidence_level=conf)
 
-    # Cora
-    # print('Cora')
-    # with open('dataset/Cora/results/e2e/results_transductive_30_nabil', 'rb') as input:
-    #     cora_transductive = pickle.load(input)
-    #
-    # print_and_plot_results(
-    #     cora_transductive,
-    #     plot_title=f"Transductive learning, {conf * 100}% confidence intervals",
-    #     other_deltas='t',
-    #     confidence_level=conf)
-    #
-    # # CiteSeer
-    # print('CiteSeer PyG')
-    # with open('dataset/CiteSeer/results/e2e/results_transductive_30', 'rb') as input:
-    #     citeseer_transductive = pickle.load(input)
-    #
-    # print_and_plot_results(
-    #     citeseer_transductive,
-    #     plot_title=f"Transductive learning, {conf * 100}% confidence intervals",
-    #     other_deltas='t',
-    #     confidence_level=conf)
+    # check if plots directory exists
+    plot_path = Path().resolve() / 'plots'
+    if not plot_path.exists():
+        plot_path.mkdir()
 
-    # PubMed
-    # print('PubMed')
-    # with open('dataset/PubMed/results/e2e/results_transductive_30_nabil_earlystopping', 'rb') as input:
-    #     pubmed_transductive = pickle.load(input)
-    #
-    # print_and_plot_results(
-    #     pubmed_transductive,
-    #     plot_title=f"Transductive learning, {conf * 100}% confidence intervals",
-    #     other_deltas='t',
-    #     confidence_level=conf)
+    path = Path().resolve() / 'results'
+    print('Analyze results with initial implementation ')
+    for name in ['CiteSeer', 'Cora', 'PubMed']:
 
-    # print('Flickr')
-    # with open('dataset/Flickr/results/e2e/results_transductive_100', 'rb') as input:
-    #     flickr_transductive = pickle.load(input)
-    # print_stats(flickr_transductive)
-    # # print_and_plot_results(
-    # #     flickr_transductive,
-    # #     plot_title=f"Transductive learning, {conf * 100}% confidence intervals",
-    # #     other_deltas='t',
-    # #     confidence_level=conf)
+        print(f'Dataset {name}')
+        try:
+            with open(path / str('results_transductive_'+name), 'rb') as input:
+                history = pickle.load(input)
+        except FileNotFoundError:
+            print(f'No results file for {name}. Run  might not have finished yet.')
+            continue
 
+        print_and_plot_results(
+            history,
+            plot_title=f"{name}, {conf * 100}% confidence intervals",
+            other_deltas='t',
+            confidence_level=conf)
