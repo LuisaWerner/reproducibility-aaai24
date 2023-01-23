@@ -1,7 +1,0 @@
-class_0,class_1,class_2
-Link
-
->
-_:nclass_0(x),nLink(x.y),class_0(y)
-_:nclass_1(x),nLink(x.y),class_1(y)
-_:nclass_2(x),nLink(x.y),class_2(y)
