@@ -16,7 +16,7 @@ This repository contains to sub-directories that refer to the experiments conduc
 The results of both approaches are stored in the respective '/results' subdirectory. 
 
 ### Before running the experiments in both implementations
-1. In order to make sure that the right environment is used, the necessary Python packages and their versions are specified in `requirements.txt`. We use Python 3.9.12. To install them go in the project directory and create a conda environment with the following packages. 
+1. In order to make sure that the right environment is used, the necessary Python packages and their versions are specified in `requirements.txt`. We use Python 3.9. To install them go in the project directory and create a conda environment with the following packages. 
 ```
 pip install -r requirements.txt
 ``` 
