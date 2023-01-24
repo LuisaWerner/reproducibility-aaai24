@@ -18,6 +18,7 @@ This repository contains to sub-directories that refer to the experiments conduc
 ```
 pip install -r requirements.txt
 ``` 
+The full list of packages in our environment including the dependencies is specified in `system_packages.txt`. 
 
 2. While the Citeseer dataset used by the initial implementation is already stored in the directory `CiteSeer_reproduce`, the datasets Cora and PubMed have to be loaded from PyTorch Geometric [[Source](https://pytorch-geometric.readthedocs.io/en/latest/_modules/torch_geometric/datasets/planetoid.html)] and preprocessed. 
 Run the following command from the project directory to get PubMed and Cora. 
