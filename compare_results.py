@@ -16,7 +16,7 @@ def main():
     initial_path = Path().resolve() / 'initial_implementation' / 'results'
     re_path = Path().resolve() / 're_implementation' / 'results'
 
-    datasets = ['CiteSeer', 'Cora', 'PubMed']
+    datasets = ['Cora', 'CiteSeer', 'PubMed']
     training_dims = [0.1, 0.25, 0.5, 0.75, 0.9]
 
     for name in datasets:

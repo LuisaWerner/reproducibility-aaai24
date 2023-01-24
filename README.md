@@ -1,4 +1,4 @@
-## What Does It Take to Reproduce Experiments? Evidences from the Neuro-Symbolic Domain.
+# What Does It Take to Reproduce Experiments? Evidences from the Neuro-Symbolic Domain.
 
 This repository contains our re-implementation of the experiments conducted with [Knowledge Enhanced Neural Networks (KENN)](https://github.com/rmazzier/KENN-Citeseer-Experiments) on the [Citeseer Dataset](https://linqs.soe.ucsc.edu/data), including the re-implementation of KENN in PyTorch and [PyTorch Geometric](https://github.com/pyg-team/pytorch_geometric). We also extended the experiments to the datasets Cora and PubMed. 
 
@@ -8,13 +8,15 @@ This repository contains our re-implementation of the experiments conducted with
 | Cora           | from Planetoid, Citation Network | 2,708     | 10,556      | 1,433     | 7        | Node Classification  |
 | PubMed         | from Planetoid, Citation Network | 19,717    | 88,648      | 500       | 3        | Node Classification  |
 
-### Overview of this repository
+## Overview of this repository
 This repository contains to sub-directories that refer to the experiments conducted with the initial implementation and the re-implementation.  
-1. The initial_implementation contains code from initial experiments: basically found [here]9(https://github.com/rmazzier/KENN-Citeseer-Experiments), extended to Cora and PubMed
+1. The initial_implementation contains code from initial experiments [here](https://github.com/rmazzier/KENN-Citeseer-Experiments), extended to Cora and PubMed
 2. The re_implementation contains code for the experiments based on PyTorch. 
 
+The results of both approaches are stored in the respective '/results' subdirectory. 
+
 ### Before running the experiments in both implementations
-1. In order to make sure that the right environment is used, the necessary Python packages and their versions are specified in `requirements.txt`. We use Python 3.9.12. To install them go in the project directory and create a conda environment  
+1. In order to make sure that the right environment is used, the necessary Python packages and their versions are specified in `requirements.txt`. We use Python 3.9. To install them go in the project directory and create a conda environment with the following packages. 
 ```
 pip install -r requirements.txt
 ``` 
@@ -40,8 +42,8 @@ python inspect_results.py
 ```
 
 ### To run the replicated experiment.
-We use [Weights and Biases](https://wandb.ai/site) as experiment tracking tool. The experiments can be run without or with a weights and biases account.
-1. To run the experiments without WandB connection run the following command. 
+We use [Weights and Biases](https://wandb.ai/site) (WandB) as experiment tracking tool. The experiments can be run WITHOUT or WITH  the use of WandB.
+1. To run the experiments without WandB, run the following command. 
 
 ```
 cd re-implementation
@@ -79,10 +81,7 @@ python compare_results.py
 ```
 
 ### Hyperparameters 
-The hyperparameters of the run are stored in the conf.json file. By default, the conf.json file contains parameters mentioned in the paper.
-In the file `re-implementation/conf.json`, the hyperparameters and settings of the are saved. The last column indicates whether the parameter can be modified in this implementation and to which values it should be set. 
-In this repository, this file uses the parameter combinations described in the paper. 
-Here is an overview about the hyperparameters that can be set: 
+In the file `re-implementation/conf.json`, the hyperparameters and settings of the runs are configured and saved. By default, the conf.json file contains parameters mentioned in the paper. The last column indicates whether the parameter can be modified in this implementation and to which values it should be set. 
 
 | Parameter            | description                                                         | default                    | state                                                                                               |
 |----------------------|---------------------------------------------------------------------|----------------------------|-----------------------------------------------------------------------------------------------------|
