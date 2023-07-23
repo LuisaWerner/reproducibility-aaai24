@@ -1,0 +1,18 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  What Does It Take to Reproduce Experiments? Evidences from
+  the Neuro-Symbolic Domain.
+message: 'Cite this work '
+type: software
+authors:
+  - given-names: Luisa
+    family-names: Werner
+    email: luisa.werner@inria.fr
+    name-particle: Luisa
+    affiliation: INRIA Grenoble
+    orcid: 'https://orcid.org/0000-0002-1431-6490'
+repository-code: 'https://github.com/LuisaWerner/kenn_experiments'
+license: MIT
