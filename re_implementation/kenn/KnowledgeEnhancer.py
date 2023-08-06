@@ -45,7 +45,7 @@ class KnowledgeEnhancer(torch.nn.Module):
         weights = []
         deltas_list = []
         indexes_list = []
-        # TODO: parllelize over clauses
+        # TODO: parallelize over clauses
         for enhancer in self.clause_enhancers:
             delta, indices = enhancer(ground_atoms)
             deltas_list.append(delta)

@@ -56,11 +56,8 @@ class ClauseEnhancer(torch.nn.Module):
                 sign = -1
                 literal = literal[1:]
 
-            # This could be improved using a hashmap instead of a list
             literal_index = available_predicates.index(literal)
             gather_literal_indices.append(literal_index)
-            # What's the difference? This just creates singletons of the same list as above.
-            # gather is [n], scatter is [n, 1]...
             scatter_literal_indices.append([literal_index])
             signs.append(sign)
 
