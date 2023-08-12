@@ -1,4 +1,4 @@
-# What Does It Take to Reproduce Experiments? Evidences from the Neuro-Symbolic Domain.
+# Reproduce, Replicate, Reevaluate. The Long but Safe Way to Extend Machine Learning Methods.
 
 This repository contains our re-implementation of the experiments conducted with [Knowledge Enhanced Neural Networks (KENN)](https://github.com/rmazzier/KENN-Citeseer-Experiments) on the [Citeseer Dataset](https://linqs.soe.ucsc.edu/data), including the re-implementation of KENN in PyTorch and [PyTorch Geometric](https://github.com/pyg-team/pytorch_geometric). We also extended the experiments to the datasets Cora and PubMed. 
 
