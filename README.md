@@ -1,10 +1,6 @@
 # Reproduce, Replicate, Reevaluate. The Long but Safe Way to Extend Machine Learning Methods.
 This is a work by Luisa Werner, Nabil Layaïda, Pierre Genevès, Jérôme Euzenat, Damien Graux. 
 
-Univ. Grenoble Alpes, Inria, CNRS, Grenoble INP, LIG F-38000 Grenoble, France
-
-
-
 This repository contains our re-implementation of the experiments conducted with [Knowledge Enhanced Neural Networks (KENN)](https://github.com/rmazzier/KENN-Citeseer-Experiments) on the [Citeseer Dataset](https://linqs.soe.ucsc.edu/data), including the re-implementation of the Experiments in PyTorch and [PyTorch Geometric](https://github.com/pyg-team/pytorch_geometric). We also extended the experiments to the datasets Cora and PubMed. 
 
 
