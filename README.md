@@ -2,6 +2,7 @@
 
 This repository contains our re-implementation of the experiments conducted with [Knowledge Enhanced Neural Networks (KENN)](https://github.com/rmazzier/KENN-Citeseer-Experiments) on the [Citeseer Dataset](https://linqs.soe.ucsc.edu/data), including the re-implementation of the Experiments in PyTorch and [PyTorch Geometric](https://github.com/pyg-team/pytorch_geometric). We also extended the experiments to the datasets Cora and PubMed. 
 
+
 | Name           | Description                      | #nodes    | #edges      | #features | #Classes | Task                 |
 |----------------|----------------------------------|-----------|-------------|-----------|----------|----------------------|
 | CiteSeer       | from Planetoid, Citation Network | 3,327     | 9,104       | 3,703     | 6        | Node classification  |
@@ -11,10 +12,11 @@ This repository contains our re-implementation of the experiments conducted with
 ## Overview of this repository
 This repository contains to sub-directories that refer to the experiments conducted with the initial implementation and the re-implementation.  
 1. The initial_implementation contains code from initial experiments [here](https://github.com/rmazzier/KENN-Citeseer-Experiments), extended to Cora and PubMed
-2. The re_implementation of the experiments based on PyTorch. 
-3. The implementation of KENN layers in PyTorch from this [repository](https://github.com/HEmile/KENN-PyTorch).  
+2. The re_implementation of the experiments.
 
 The results of both approaches are stored in the respective `/results` subdirectory. 
+
+The implementation of KENN layers in PyTorch is used from [here](https://github.com/HEmile/KENN-PyTorch).  
 
 ### Before running the experiments in both implementations
 1. In order to make sure that the right environment is used, the necessary Python packages and their versions are specified in `requirements.txt`. We use Python 3.9. To install them go in the project directory and create a conda environment with the following packages. 
@@ -120,7 +122,6 @@ In the file `re-implementation/conf.json`, the hyperparameters and settings of t
 | wandb_entity         | entity name for weights and biases                                  | "None"                     | modifiable depending on custom WandB settings                                                       |
 | weight init          | initialization of weights in NN                                     | xavier uniform             |                                                                                                     |
  
-
 
 
 
