@@ -123,7 +123,55 @@ In the file `re-implementation/conf.json`, the hyperparameters and settings of t
 | weight init          | initialization of weights in NN                                     | xavier uniform             |                                                                                                     |
  
 
+## How to Cite
+This work can be cited as follows:
+```
+@unpublished{werner:hal-04035305,
+  TITLE = {{What Does It Take to Reproduce Experiments? Evidences from the Neuro-Symbolic Domain}},
+  AUTHOR = {Werner, Luisa Sophie and Laya{\"i}da, Nabil and Genev{\`e}s, Pierre and Euzenat, J{\'e}r{\^o}me},
+  URL = {https://inria.hal.science/hal-04035305},
+  NOTE = {working paper or preprint},
+  YEAR = {2023},
+  PDF = {https://inria.hal.science/hal-04035305v2/file/nsrep.pdf},
+  HAL_ID = {hal-04035305},
+  HAL_VERSION = {v2},
+}
+```
 
+The works of KENN can be cited as follows:
+```
+# Knowledge Enhanced Neural Networks for Relational Domains
+@InProceedings{10.1007/978-3-031-27181-6_7,
+author="Daniele, Alessandro
+and Serafini, Luciano",
+editor="Dovier, Agostino
+and Montanari, Angelo
+and Orlandini, Andrea",
+title="Knowledge Enhanced Neural Networks for Relational Domains",
+booktitle="AIxIA 2022 -- Advances in Artificial Intelligence",
+year="2023",
+publisher="Springer International Publishing",
+address="Cham",
+pages="91--109",
+isbn="978-3-031-27181-6"
+}
+
+# Knowledge Enhanced Neural Networks
+@InProceedings{10.1007/978-3-030-29908-8_43,
+author="Daniele, Alessandro
+and Serafini, Luciano",
+editor="Nayak, Abhaya C.
+and Sharma, Alok",
+title="Knowledge Enhanced Neural Networks",
+booktitle="PRICAI 2019: Trends in Artificial Intelligence",
+year="2019",
+publisher="Springer International Publishing",
+address="Cham",
+pages="542--554",
+isbn="978-3-030-29908-8"
+}
+
+```
 
 
 
