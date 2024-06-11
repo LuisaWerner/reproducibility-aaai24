@@ -127,16 +127,7 @@ In the file `re-implementation/conf.json`, the hyperparameters and settings of t
 ## How to Cite
 This work can be cited as follows:
 ```
-@unpublished{werner:hal-04035305,
-  TITLE = {{What Does It Take to Reproduce Experiments? Evidences from the Neuro-Symbolic Domain}},
-  AUTHOR = {Werner, Luisa Sophie and Laya{\"i}da, Nabil and Genev{\`e}s, Pierre and Euzenat, J{\'e}r{\^o}me},
-  URL = {https://inria.hal.science/hal-04035305},
-  NOTE = {working paper or preprint},
-  YEAR = {2023},
-  PDF = {https://inria.hal.science/hal-04035305v2/file/nsrep.pdf},
-  HAL_ID = {hal-04035305},
-  HAL_VERSION = {v2},
-}
+@article{Werner_Layaïda_Genevès_Euzenat_Graux_2024, title={Reproduce, Replicate, Reevaluate. The Long but Safe Way to Extend Machine Learning Methods}, volume={38}, url={https://ojs.aaai.org/index.php/AAAI/article/view/29515}, DOI={10.1609/aaai.v38i14.29515}, abstractNote={Reproducibility is a desirable property of scientific research. On the one hand, it increases confidence in results. On the other hand, reproducible results can be extended on a solid basis. In rapidly developing fields such as machine learning, the latter is particularly important to ensure the reliability of research. In this paper, we present a systematic approach to reproducing (using the available implementation), replicating (using an alternative implementation) and reevaluating (using different datasets) state-of-the-art experiments. This approach enables the early detection and correction of deficiencies and thus the development of more robust and transparent machine learning methods. We detail the independent reproduction, replication, and reevaluation of the initially published experiments with a method that we want to extend. For each step, we identify issues and draw lessons learned. We further discuss solutions that have proven effective in overcoming the encountered problems. This work can serve as a guide for further reproducibility studies and generally improve reproducibility in machine learning.}, number={14}, journal={Proceedings of the AAAI Conference on Artificial Intelligence}, author={Werner, Luisa and Layaïda, Nabil and Genevès, Pierre and Euzenat, Jérôme and Graux, Damien}, year={2024}, month={Mar.}, pages={15850-15858} }
 ```
 
 The works of KENN can be cited as follows:
